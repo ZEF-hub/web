@@ -1,0 +1,133 @@
+/*********************************************************/
+html{
+	height: 100%;
+	font-size: 20px;
+	scroll-behavior: smooth;
+}
+
+body{
+	margin: 0;
+	background-color: #282A2B;
+	min-height: 100%;
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+	color: #ddd;
+	font-family: 'Open Sans', sans-serif;
+}
+
+header{
+	background-color: #282A29;
+	min-height: 50px;
+	min-width: 100%;
+	display: grid;
+	grid-template-columns: 50px 25vw 1fr 1fr 1fr 25vw;
+	box-shadow: 0px 0px 40px #1C1D1E ;
+	align-items: center;
+}
+
+header a{
+	color: inherit;
+	text-decoration: none;
+}
+
+footer{
+	background-color: #282A29;
+	min-height: 50px;
+	min-width: 100%;
+	line-height: 50px;
+	text-align: center;
+	box-shadow: 0 0 40px #1C1D1E ;
+}
+
+/*********************************************************/
+
+.main-index{
+	display: grid;
+	grid-template-columns: 15vw 1fr 2fr 15vw;
+	margin-top: 10vh;
+	margin-bottom: 10vh;
+}
+
+.main-index .content{
+	margin-left: 2vw;
+}
+
+.main-side{
+	display: grid;
+	grid-template-columns: 15vw 1fr 15vw;
+}
+
+.self-photo img{
+	width: 100%;
+	border-radius: 30px;
+	filter: brightness(80%);
+}
+
+.age{
+	color: #878787;
+	white-space: pre-wrap;
+	margin: clamp(5px, 5vh, 40px) 0;
+}
+
+.home-image{
+	filter: invert(73%) sepia(74%) saturate(423%) hue-rotate(29deg) brightness(105%) contrast(97%);
+	margin: 2.5px 2.5px 2.5px 10px;
+}
+
+.up-image{
+	filter: invert(73%) sepia(74%) saturate(423%) hue-rotate(29deg) brightness(105%) contrast(97%);
+}
+
+.a-home{
+	width: 50px;
+	height: 50px;
+}
+
+.fckn-up-arrow{
+	display: grid;
+	grid-template-columns: auto 70px;
+}
+
+.b-more {
+  min-width: 100px;
+  font-family: inherit;
+  appearance: none;
+  border: 0;
+  border-radius: 5px;
+  background: #B7F238;
+  color: #000;
+  padding: 8px 16px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.b-more:hover {
+  background: #89B52A;
+}
+
+.b-more:focus {
+  outline: none;
+  box-shadow: 0 0 10px 4px #DBFF8E;
+}
+
+.heading{
+	color: #B7F238;
+}
+
+/*********************************************************/
+
+.ta-c{
+	text-align: center;
+}
+
+.fs-78{
+	font-size: 78px;
+}
+
+.c-green{
+	color: #B7F238;
+}
+
+.m-b-for-cntnt{
+	margin-bottom: clamp(60px, 5vh, 100px);
+}
