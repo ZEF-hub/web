@@ -1,2 +1,4 @@
 github repo: https://github.com/ZEF-hub/web
-site link: lab2.std-2373.ist.mospolytech.ru
+
+lab1 link: lab1.std-2373.ist.mospolytech.ru
+lab2 link: lab2.std-2373.ist.mospolytech.ru
