@@ -16,50 +16,370 @@
   font-family: "Tobias-light";
   src: url("../fonts/Tobias-Light.woff2") format("truetype");
 }
-html {
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+@keyframes link-pulse {
+  0% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: #F27E40;
+}
+
+html, body {
   margin: 0;
   padding: 0;
   border: 0;
+  font-size: 100%;
   font: inherit;
+  vertical-align: baseline;
   scroll-behavior: smooth;
   color-scheme: dark;
 }
-html body {
+
+body {
   background: #000;
   color: #fff;
-  font: inherit;
+  cursor: url(../images/pointer-1.svg) 10 10, default;
+}
+body .container-fluid {
+  width: 100%;
   padding-right: 24px;
   padding-left: 24px;
   margin-right: auto;
   margin-left: auto;
 }
-html body header {
-  display: flex;
-  justify-content: space-between;
-  font-family: "Tobias-light", serif;
-  font-size: 32px;
-  letter-spacing: -2px;
+body a, body button {
+  text-decoration: none;
+  cursor: url(../images/pointer-2.svg) 10 10, default;
 }
-html body header .header-container {
+body a:hover {
+  animation: link-pulse ease-in-out 0.8s infinite alternate;
+}
+body .header-container {
   height: 72px;
   width: 100%;
   padding-left: 24px;
   padding-right: 24px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
+  position: fixed;
+  align-items: center;
+  z-index: 3;
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.2) 60%, rgba(0, 0, 0, 0.05) 80%, transparent);
 }
-html body header .header-links {
+body header {
+  font-family: "Tobias-light", serif;
+  font-size: 32px;
+  letter-spacing: -2px;
+}
+body header .header-content {
+  display: flex;
+  align-items: center;
+}
+body header .header-content .logo a::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background-color: #F45500;
+  display: inline-block;
+  margin-top: 4px;
+  margin-right: 6px;
+  border-radius: 50%;
+  box-shadow: 0 0 12px hsla(21, 100%, 48%, 0.9);
+}
+body header .header-links {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
+  letter-spacing: -2px;
 }
-html body header .header-links .interpunct {
+body header .header-links .interpunct {
   width: 24px;
   text-align: center;
 }
-html body header a {
+body header .header-links .header-preorder {
+  font-family: "Tobias-light", serif;
+  letter-spacing: -2px;
+  font-size: 32px;
+  height: 48px;
+  background-color: #F45500;
+  border-radius: 16px;
+  border: none;
+  color: #ffffff;
+  padding-left: 16px;
+  padding-right: 16px;
+  transition: transform 0.2s;
+  box-shadow: 0 0 30px hsla(21, 100%, 48%, 0.6);
+}
+body header a {
   text-decoration: none;
   color: #fff;
 }
-html body main {
+body main .col-1 {
+  flex: 1 3 33%;
+  max-width: 33%;
+}
+body main .col-2 {
+  flex: 3 1 66%;
+  max-width: 66%;
+}
+body main .col-3 {
+  flex: 1 1 100%;
+}
+body main .col-4 {
+  flex: 1 2 50%;
+  max-width: 50%;
+}
+body main .grey-text {
+  color: #9D9D9D;
+}
+body main .image-row {
+  display: flex;
+  margin-left: -4px;
+  margin-right: -4px;
+}
+body main .image-row .card {
+  background-color: #202020;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  margin: 4px;
+  transition: transform 0.2s;
+  display: flex;
+}
+body main .image-row img {
   width: 100%;
+}
+body main .card-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 24px;
+  width: 100%;
+}
+body main .card-heading, body main .card-text-small {
+  font-family: "GT-Flexa", serif;
+  font-size: 26px;
+  line-height: 28px;
+}
+body main .card-text-large {
+  font-family: "GT-Flexa", serif;
+  font-size: 68px;
+  line-height: 72px;
+  font-weight: 200;
+  width: 66%;
+}
+body main video {
+  border-radius: 20px;
+  width: 100%;
+}
+body main .intro-video {
+  padding-top: 72px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  transition: transform 0.2s;
+}
+body main h1 {
+  margin: 0 0 16px 0;
+  font-family: "GT-Flexa", serif;
+  font-size: 68px;
+  line-height: 68px;
+  font-weight: 200;
+}
+body main h2 {
+  margin: 4px 0 16px 0;
+  font-family: "GT-Flexa", serif;
+  font-size: 42px;
+  line-height: 48px;
+  font-weight: 200;
+}
+body main .section-header {
+  overflow: hidden;
+}
+body main .section-header .marquee-wrapper {
+  display: flex;
+  animation: marquee 12s linear infinite;
+  width: fit-content;
+}
+body main .section-header .marquee-wrapper h3 {
+  margin: 0 0 4px 0;
+  font-family: "GT-Flexa", serif;
+  font-size: 6vw;
+  line-height: 92px;
+  font-weight: 200;
+  padding: 0 1vw;
+  will-change: transform;
+}
+body main .tech-specs-table-container {
+  width: 100%;
+}
+body main .tech-specs-table-container .table-row {
+  width: 100%;
+  display: flex;
+  border-bottom: 1px solid #9D9D9D;
+  padding: 16px 0;
+  transition: background-color 0.2s ease-out, color 0.3s;
+}
+body main .tech-specs-table-container .table-row .table-row-heading, body main .tech-specs-table-container .table-row .table-row-entries {
+  font-family: "GT-Flexa", serif;
+  font-size: 26px;
+  line-height: 34px;
+  font-variant-numeric: tabular-nums slashed-zero;
+}
+body main .tech-specs-table-container .table-row .table-row-heading {
+  width: 25%;
+  padding-left: 24px;
+}
+body main .tech-specs-table-container .table-row .table-row-entries {
+  width: 75%;
+}
+body main .tech-specs-table-container .table-row .table-row-entries a {
+  color: #9D9D9D;
+  text-decoration: underline;
+}
+body main .tech-specs-table-container .table-row:hover {
+  background-color: #fff;
+  color: #000;
+}
+body main .waitlist-card-container {
+  background-color: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  margin: 48px 4px 4px 4px;
+  display: flex;
+  align-items: center;
+}
+body main .waitlist-info-container {
+  font-family: "GT-Flexa", sans-serif;
+  color: #000;
+  padding-right: 96px;
+}
+body main .waitlist-image, body main .waitlist-info-container {
+  width: 50% !important;
+}
+body main .waitlist-heading {
+  font-size: 68px;
+  line-height: 72px;
+  font-weight: 200;
+}
+body main .waitlist-text {
+  font-size: 24px;
+  line-height: 32px;
+  padding-top: 16px;
+  padding-bottom: 32px;
+}
+body main .waitlist-email-field {
+  border-radius: 20px;
+  background-color: #EAEAEA;
+}
+body main .waitlist-email-field .return-to-website {
+  width: 100%;
+  max-width: 100% !important;
+}
+body main .waitlist-email-field, body main .waitlist-email-field input, body main .waitlist-email-field button, body main #mc-embedded-subscribe, body main .mc-field-group {
+  height: 72px;
+  width: 100%;
+  display: flex;
+}
+body main .waitlist-email-field a {
+  width: 100%;
+}
+body main .waitlist-email-field button, body main #mc-embedded-subscribe, body main .btn-primary {
+  border: none !important;
+  background-color: #F45500 !important;
+  color: #fff !important;
+  max-width: 200px !important;
+  border-radius: 20px !important;
+  transition: transform 0.2s !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+body main .pre-order-page-link {
+  font-family: "Tobias-Light", sans-serif;
+  font-size: 42px;
+  letter-spacing: -2px;
+}
+body footer {
+  font-family: "Tobias-light", serif;
+  font-size: 32px;
+  letter-spacing: -2px;
+}
+body footer .copyright {
+  max-width: 33%;
+}
+body footer .footer-links {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+}
+body footer .footer-links a {
+  color: #fff;
+  padding: 8px 0;
+}
+body footer .footer-links-column-1, body footer .footer-links-column-2 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+body .footer-container {
+  margin: 128px 0 48px 0;
+  min-height: 337px;
+  width: 100%;
+  padding-left: 24px;
+  padding-right: 24px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/* About page */
+.about {
+  background-color: #fff;
+  color: #000;
+}
+.about .header-container {
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.2) 60%, rgba(255, 255, 255, 0.05) 80%, transparent);
+}
+.about .logo-text, .about a {
+  color: #000;
+}
+.about .footer-links a {
+  color: #000;
+}
+
+.about-page-content h1 {
+  padding-top: 128px;
+}
+.about-page-content p {
+  margin: 64px 0;
+}
+
+.about-page-content h1, .about-page-content ol, .about-page-content p {
+  font-family: "Tobias-light", serif;
+  font-size: 85px;
+  line-height: 85px;
+  letter-spacing: -4px;
 }/*# sourceMappingURL=style.css.map */
