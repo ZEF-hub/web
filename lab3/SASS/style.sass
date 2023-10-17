@@ -1,0 +1,58 @@
+@font-face 
+    font-family: 'GT-Flexa'
+    src: url('../fonts/GT-Flexa-Extended-Light.woff2') format('opentype')
+    font-weight: 300
+
+@font-face 
+    font-family: 'GT-Flexa'
+    src: url('../fonts/GT-Flexa-Extended-Thin.woff2') format('opentype')
+    font-weight: 200
+
+@font-face 
+    font-family: 'GT-Flexa-text'
+    src: url('../fonts/GT-Flexa-Standard-Light.woff2') format('opentype')
+
+@font-face 
+    font-family: 'Tobias-light'
+    src: url('../fonts/Tobias-Light.woff2') format('truetype')
+
+
+html
+    margin: 0
+    padding: 0
+    border: 0
+    font: inherit
+    scroll-behavior: smooth
+    color-scheme: dark
+    body
+        background: #000
+        color: #fff
+        font: inherit
+        padding-right: 24px
+        padding-left: 24px
+        margin-right: auto
+        margin-left: auto
+        header
+            display: flex
+            justify-content: space-between
+            font-family: 'Tobias-light', serif
+            font-size: 32px
+            letter-spacing: -2px
+            .header-container
+                height: 72px
+                width: 100%
+                padding-left: 24px
+                padding-right: 24px
+                display: flex
+                justify-content: flex-start
+            .header-links
+                display: flex
+                justify-content: flex-end
+                .interpunct
+                    width: 24px
+                    text-align: center
+            a
+                text-decoration: none
+                color: #fff
+        main
+            width: 100%
