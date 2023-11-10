@@ -1,0 +1,109 @@
+html
+    margin: 0
+    padding: 0
+    height: 100vh
+    font-family: Montserrat
+
+body
+    margin: 0
+    padding: 0
+
+// Index page
+.index
+    height: 100vh
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    background: linear-gradient(to left, #2034e77e, #646de777, #b13be785, #d36de788)
+    .content
+        display: flex
+        flex-direction: column
+        align-items: center
+    .page
+        background-color: #888888
+        box-shadow: 0 0 20px rgba(0, 0, 0, .5)
+        border-radius: 15px
+        padding: 20px 50px
+        margin: 20px
+        a
+            text-decoration: none
+            color: #ffffff
+            font-size: 40px
+    // .tic-tac-toe
+
+    // .calc
+
+// Calc page
+.calc-page
+    $blue: #3498db
+    height: 100vh
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    font-family: Montserrat
+    background: linear-gradient(to left, #2034e77e, #646de777, #b13be785, #d36de788)
+    .screen
+        box-sizing: border-box
+        box-shadow: 0 0 10px 0 $blue inset, 0 0 10px 4px $blue
+        background: #00000050
+        color: #ffffff
+        width: 100%
+        height: clamp(50px, 8vh, 8vh)
+        border-radius: 100vh
+        margin-bottom: 20px
+        display: flex
+        align-items: center
+        justify-content: right
+        padding-right: 20px
+        font-size: 24px
+        font-weight: 500
+
+    .buttons
+        display: grid
+        grid-template-columns: 5fr 3fr
+        .digits
+            display: grid
+            grid-template-columns: repeat(3, 1fr)
+            grid-template-rows: repeat(3, 1fr)
+            justify-content: center
+        .other
+            display: grid
+            grid-template-columns: repeat(2, 1fr)
+            grid-template-rows: repeat(4, 1fr)
+            justify-content: center
+            align-items: center
+        .key
+            // font-size: 26px
+            // border-radius: 200px
+            // aspect-ratio: 1 / 1
+            // margin: 10px
+            // font-family: Montserrat
+            border: none
+            box-sizing: border-box
+            appearance: none
+            background-color: transparent
+            border-radius: 100vh
+            cursor: pointer
+            display: flex
+            align-self: center
+            font-size: 36px
+            margin: 15px 10px
+            padding: 16px 32px
+            text-decoration: none
+            text-align: center
+            text-transform: uppercase
+            font-family: 'Montserrat', sans-serif
+            font-weight: 500
+            border-color: $blue
+            color: #fff
+            box-shadow: 0 0 40px 40px $blue inset, 0 0 0 0 $blue
+            transition: all 150ms ease-in-out
+            width: clamp(50px, 10vh, 10vh)
+            height: clamp(50px, 10vh, 10vh)
+            justify-content: center
+            align-items: center
+            &:hover
+                color: #000
+                box-shadow: 0 0 10px 0 $blue inset, 0 0 10px 4px $blue

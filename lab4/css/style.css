@@ -1,0 +1,110 @@
+html {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  font-family: Montserrat;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.index {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to left, rgba(32, 52, 231, 0.4941176471), rgba(100, 109, 231, 0.4666666667), rgba(177, 59, 231, 0.5215686275), rgba(211, 109, 231, 0.5333333333));
+}
+.index .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.index .page {
+  background-color: #888888;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  padding: 20px 50px;
+  margin: 20px;
+}
+.index .page a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 40px;
+}
+
+.calc-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: Montserrat;
+  background: linear-gradient(to left, rgba(32, 52, 231, 0.4941176471), rgba(100, 109, 231, 0.4666666667), rgba(177, 59, 231, 0.5215686275), rgba(211, 109, 231, 0.5333333333));
+}
+.calc-page .screen {
+  box-sizing: border-box;
+  box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
+  background: rgba(0, 0, 0, 0.3137254902);
+  color: #ffffff;
+  width: 100%;
+  height: clamp(50px, 8vh, 8vh);
+  border-radius: 100vh;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  padding-right: 20px;
+  font-size: 24px;
+  font-weight: 500;
+}
+.calc-page .buttons {
+  display: grid;
+  grid-template-columns: 5fr 3fr;
+}
+.calc-page .buttons .digits {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  justify-content: center;
+}
+.calc-page .buttons .other {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  justify-content: center;
+  align-items: center;
+}
+.calc-page .buttons .key {
+  border: none;
+  box-sizing: border-box;
+  appearance: none;
+  background-color: transparent;
+  border-radius: 100vh;
+  cursor: pointer;
+  display: flex;
+  align-self: center;
+  font-size: 36px;
+  margin: 15px 10px;
+  padding: 16px 32px;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  border-color: #3498db;
+  color: #fff;
+  box-shadow: 0 0 40px 40px #3498db inset, 0 0 0 0 #3498db;
+  transition: all 150ms ease-in-out;
+  width: clamp(50px, 10vh, 10vh);
+  height: clamp(50px, 10vh, 10vh);
+  justify-content: center;
+  align-items: center;
+}
+.calc-page .buttons .key:hover {
+  color: #000;
+  box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
+}/*# sourceMappingURL=style.css.map */
