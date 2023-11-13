@@ -229,7 +229,8 @@ window.onload = function () {
         if (event.key >= '0' && event.key <= '9') { // Если нажата цифровая клавиша или точка
             screen.textContent += event.key; // Добавление цифры в поле
         }
-        else if (event.key === '+' || event.key === '-' || event.key === '*' || event.key === '/' || event.key === '.') { // Если нажата клавиша оператора
+        else if (event.key === '+' || event.key === '-' || event.key === '*' || event.key === '/' ||
+            event.key === '.' || event.key === '(' || event.key === ')') { // Если нажата клавиша оператора
             screen.textContent += event.key; // Добавление символа в поле
         }
         else if (event.key === 'Enter') { // Если нажата клавиша Enter, выполнить вычисление
