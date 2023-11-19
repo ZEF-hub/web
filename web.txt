@@ -3,4 +3,5 @@ github repo: https://github.com/ZEF-hub/web
 lab1 link: lab1.std-2373.ist.mospolytech.ru
 lab2 link: lab2.std-2373.ist.mospolytech.ru
 lab3 link: lab3.std-2373.ist.mospolytech.ru
-lab3 link: lab4.std-2373.ist.mospolytech.ru
+lab4 link: lab4.std-2373.ist.mospolytech.ru
+lab5 link: lab5.std-2373.ist.mospolytech.ru
