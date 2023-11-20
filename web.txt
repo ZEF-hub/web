@@ -5,3 +5,4 @@ lab2 link: lab2.std-2373.ist.mospolytech.ru
 lab3 link: lab3.std-2373.ist.mospolytech.ru
 lab4 link: lab4.std-2373.ist.mospolytech.ru
 lab5 link: lab5.std-2373.ist.mospolytech.ru
+lab6 link: lab6.std-2373.ist.mospolytech.ru
